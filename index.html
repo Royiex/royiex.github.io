@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Greeting</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playwrite+US+Traditional:wght@400;700&display=swap">
+    <link rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap" rel="stylesheet">
     <style>
       body {
         margin: 0;
         padding: 0;
-        font-family: 'Playwrite US Traditional', serif;
+		font-family: "Playwrite US Trad", cursive;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,19 +27,33 @@
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
         margin-bottom: 1rem;
       }
 
       .birthday-img {
-        border-radius: 30%;
+        border-radius: 25%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 1rem;
-        max-width: 85%;
+		margin-top: 1rem;
+        max-width: 90%;
         height: auto;
-      }
+	}
 
+	  .birthday-border {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 25%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+		width:fit-content;
+		aspect-ratio: 1/1;
+        background-color: #1c1c1e;
+		
+	  }
+	
       .greeting {
         font-size: 1rem;
         margin: 0 1rem 1rem;
@@ -69,7 +86,7 @@
   <body>
     <div class="container">
       <h1>Sretan 16. rođendannn, Teeaaaa!</h1>
-      <img src="https://github.com/Royiex/royiex.github.io/blob/main/_raljevictea-25062024-0001.jpg?raw=true" alt="birthday-cake" class="birthday-img" />
+      <div class="birthday-border"><img src="https://github.com/Royiex/royiex.github.io/blob/main/_raljevictea-25062024-0001.jpg?raw=true" class="birthday-img"/></div>
       <p class="greeting">Želim ti dan pun radosti, smijeha, torte i kolača! Neka se svi tvoji snovi i želje ispune.</p>
       <div class="message-box">
         <p>Write your message here...</p>
