@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title> . . . . . quotebook .</title>
+	<meta charset="UTF-8">
+	
+	<link rel="icon" href="other/favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/fixedsys-css/css/fixedsys.css">
+	<link rel="stylesheet" href="styles0.css"/>
+
+	<style type="text/css">
+		body {
+			background-color: #ffffff;
+			color: #4F4F4F;
+			font-family: 'Ubuntu Mono', courier new;
+			font-size: 12pt;
+		}
+
+		b {color: #7D9EC0;}
+
+		u {color: #BDA0CB;}
+
+		a {color: #B272A6; text-decoration: none;}
+
+		a:hover {color: #ffffff;}
+	</style>
+	
+	<script>
+		var space = " ";
+		var speed = "100";
+		var pos = 0;
+		var msg = "quotebook 	 . . . . . .";
+		function Scroll() {
+			document.title = msg.substring(pos, msg.length) + space + msg.substring(0, pos);
+			pos++;
+			if (pos > msg.length) pos = 0;
+			window.setTimeout("Scroll()", speed);
+		}
+		Scroll();
+	</script>
+
+	<script>
+		const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF3380'];
+		let currentIndex = 0;
+
+		function changeColor() {
+			const elements = document.querySelectorAll('.oldfont');
+			elements.forEach(element => {
+				element.style.color = colors[currentIndex];
+			});
+			currentIndex = (currentIndex + 1) % colors.length;
+		}
+
+		setInterval(changeColor, 1000);
+
+		changeColor();
+	</script>
+
+	<script src="quotes.js"></script>
+	<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js">
+	</script>
+	<script>
+		window.addEventListener("load", (event) => {
+			new cursoreffects.rainbowCursor({
+				length: 20,
+				colors: ["red", "orange", "yellow", "green", "blue", "purple"],
+				size: 4,
+			})
+		});
+	</script>
+
+</head>
+
+<body background="gifs/background.gif" onload="processCsv()">
+
+	<img src="images/island1.png" 	style="position: absolute; top: 10%; right: 80%;">
+	<img src="images/island2.png" 	style="position: absolute; top: 20%; right: 10%;" height="150">
+	<img src="images/planet1.png" 	style="position: absolute; top: 70%; right: 83%;" height="200">
+	<img src="gifs/moon1.gif" 		style="position: absolute; top: 65%; right: 13%;">
+
+
+	<center>
+		<br><br>
+		<img src="gifs/div2.gif">
+		<br><br>
+		<a class="1" href="main.html"><img src="gifs/earth0.gif" title="click to enter"><br></a>
+		<a class="1" href="main.html"><img src="images/wt.png"></a> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+		<br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+		<a class="1" href="main.html"><img src="images/tq.png" height="90"></a>
+		<br>
+		<img src="gifs/div2.gif">
+		<br><br><br>
+		<img src="gifs/neonopen.gif" height="30">
+		<br><br>
+		<div>
+			<a href="main.html">
+				<img src="gifs/arrow.gif" height="60">
+				&nbsp; &nbsp;
+				<img src="images/intro.png" height="60" href=>
+				&nbsp; &nbsp;
+				<img src="gifs/arrow1.gif" height="60">
+			</a>
+		</div>
+
+		<br><br>
+	</center>
+
+	<center>
+		<h1 class="oldfont" id="q1">Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote... Quote...</h1>
+		<h2 class="oldfont" id="n1">-- Name...</h2>
+	</center>
+
+
+	<div class="bottom">
+		<center>
+			<a>
+				<button onclick="goBack()" class="btn">
+					<img src="images/left.png">
+				</button>
+				<button onclick="processCsv()" class="btn">
+					<img src="images/right.png">
+				</button>
+			</a>
+			<br>
+			<img src="images/byroy.png" width="150" height="auto">
+
+
+			<div class="page-intro">
+				<div class="central-element">
+				  <div class="box id-1"></div>
+				  <div class="box id-2"></div>
+				  <div class="box id-3"></div>
+				  <div class="box id-4"></div>
+				  <div class="box id-5"></div>
+				  <div class="box id-6"></div>
+				  <div class="box id-7"></div>
+				  <div class="box id-8"></div>
+				  <div class="box id-9"></div>
+				  <div class="intro-graphic"></div>
+				</div>
+			  </div>
+		</center>
+	</div>
+
+
+
+
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		const firebaseConfig = {
+			apiKey: "AIzaSyAYK0dQ5bh3FpJWDJ5HBalwhfEuWUD1INE",
+			authDomain: "dada-4e860.firebaseapp.com",
+			projectId: "dada-4e860",
+			storageBucket: "dada-4e860.appspot.com",
+			messagingSenderId: "92396566554",
+			appId: "1:92396566554:web:3bbc3d9544f27b5a38b9a3"
+		};
+
+		const app = initializeApp(firebaseConfig);
+	  </script>
+
+</body>
+</html>

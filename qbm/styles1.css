@@ -1,0 +1,18 @@
+body{
+    background-image: url("gifs/colormorphstars.gif");
+    background-attachment: fixed;
+    image-rendering: pixelated;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    font-family: fixedsys;
+}
+
+h1 {
+    position: relative;
+    transform: translate(0%, 350%);
+    text-align: center;
+    font-size: 100px;
+    font-family: fixedsys;
+
+}
